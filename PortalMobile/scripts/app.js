@@ -11,7 +11,7 @@ function AdcionarIten() {
     itens.push(item)
 
     ListarItens();
-}
+} 
 
 
 
