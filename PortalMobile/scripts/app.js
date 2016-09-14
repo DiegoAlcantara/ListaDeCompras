@@ -22,7 +22,7 @@ function ListarItens() {
     var divConteuro = document.getElementById("itensLista");
     divConteuro.innerHTML = "";
 
-    itens = JSON.parse(localStorage["itemsAdicionados"]);
+    itens = JSON.parse(localStorage["itemsAdicionados"]);  
     for (var i in itens)
     {
         //var divIten = document.createElement("div");
