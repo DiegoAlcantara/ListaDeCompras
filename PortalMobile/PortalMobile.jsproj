@@ -121,6 +121,10 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="res\icons\android\icon-36-ldpi.png" />
+    <Content Include="res\icons\android\icon-48-mdpi.png" />
+    <Content Include="res\icons\android\icon-72-hdpi.png" />
+    <Content Include="res\icons\android\icon-96-xhdpi.png" />
     <Content Include="scripts\app.js" />
     <Content Include="scripts\bootstrap.js" />
     <Content Include="scripts\bootstrap.min.js" />
@@ -133,14 +137,13 @@
     <Content Include="scripts\jquery\jquery.mobile-1.3.2.js" />
     <Content Include="scripts\jquery\jquery.mobile.structure-1.3.2.css" />
     <Content Include="scripts\jquery\jquery.mobile.theme-1.3.2.css" />
-    <Folder Include="images\" />
     <Content Include="merges\android\scripts\android2.3-jscompat.js" />
     <Content Include="merges\android\scripts\platformOverrides.js" />
+    <Folder Include="images\" />
     <Folder Include="merges\ios\" />
     <Content Include="merges\windows\scripts\platformOverrides.js" />
     <Content Include="merges\windows\scripts\winstore-jscompat.js" />
     <Folder Include="merges\wp8\" />
-    <Folder Include="res\icons\android\" />
     <Folder Include="res\icons\ios\" />
     <Folder Include="res\icons\wp8\" />
     <Folder Include="res\icons\windows\" />
@@ -158,10 +161,6 @@
     <TypeScriptCompile Include="scripts\platformOverrides.ts" />
     <Content Include="css\index.css" />
     <Content Include="packages.config" />
-    <Content Include="res\icons\android\icon-36-ldpi.png" />
-    <Content Include="res\icons\android\icon-48-mdpi.png" />
-    <Content Include="res\icons\android\icon-72-hdpi.png" />
-    <Content Include="res\icons\android\icon-96-xhdpi.png" />
     <Content Include="res\icons\ios\icon-40.png" />
     <Content Include="res\icons\ios\icon-40-2x.png" />
     <Content Include="res\icons\ios\icon-50.png" />
