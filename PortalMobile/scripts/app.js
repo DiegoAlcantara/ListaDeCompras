@@ -10,6 +10,8 @@ function AdcionarIten() {
 
     itens.push(item)
 
+    localStorage["itemsAdicionados"] = JSON.stringify(itens);
+
     ListarItens();
 } 
 
@@ -19,14 +21,19 @@ function ListarItens() {
 
     var divConteuro = document.getElementById("itensLista");
     divConteuro.innerHTML = "";
+
+    itens = JSON.parse(localStorage["itemsAdicionados"]);  
     for (var i in itens)
     {
-        var divIten = document.createElement("div");
-        divIten.setAttribute("id",  + i);
-        divIten.setAttribute("class", "col-md-6");
-        divIten.innerHTML = "<p class='bg-success'>" + itens[i] + " </p>";
+        //var divIten = document.createElement("div");
+        //divIten.setAttribute("id",  + i);
+        //divIten.setAttribute("class", "col-md-6");
+        //divIten.innerHTML = "<p class='bg-success'>" + itens[i] + " </p>";
 
- 
+        var divIten = document.createElement("li");
+        divIten.setAttribute("id", +i);
+        divIten.setAttribute("class", "list-group-item");
+        divIten.innerHTML = itens[i];
         divConteuro.appendChild(divIten);
 
         divIten.addEventListener("click", remove)
@@ -47,6 +54,8 @@ function remove()
 
     if (s == true) {
         itens.splice(i, 1);
+
+        localStorage["itemsAdicionados"] = JSON.stringify(itens);
     }
 
     ListarItens();
