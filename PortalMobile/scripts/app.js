@@ -1,18 +1,29 @@
 ﻿
-var item;
+
 var itens = [];
-var qtd;
+
 
 
 function AdcionarIten() {
 
-    item = document.getElementById("item").value;
+    var item = document.getElementById("item").value;
 
-    itens.push(item)
+    if (item == "")
+    {
+        alert("Item vazio!");
+        return false;
+    }
 
-    localStorage["itemsAdicionados"] = JSON.stringify(itens);
+    var qtd = document.getElementById("qtd").value
+
+    itens.push(qtd+" - "+item)
+
+    salvar();
 
     ListarItens();
+
+    document.getElementById("item").value = "";
+    document.getElementById("qtd").value = 1;
 } 
 
 
@@ -22,7 +33,8 @@ function ListarItens() {
     var divConteuro = document.getElementById("itensLista");
     divConteuro.innerHTML = "";
 
-    itens = JSON.parse(localStorage["itemsAdicionados"]);  
+    itens = JSON.parse(localStorage["itemsAdicionados"]);
+
     for (var i in itens)
     {
         //var divIten = document.createElement("div");
@@ -55,7 +67,7 @@ function remove()
     if (s == true) {
         itens.splice(i, 1);
 
-        localStorage["itemsAdicionados"] = JSON.stringify(itens);
+        salvar();
     }
 
     ListarItens();
@@ -63,9 +75,25 @@ function remove()
 }
 
 
+function limpar()
+{
+    itens = [];
+    salvar();
+    ListarItens();
+
+}
+
+function salvar()
+{
+    localStorage["itemsAdicionados"] = JSON.stringify(itens);
+}
+
 document.getElementById("add").addEventListener('click', AdcionarIten);
+document.getElementById("limpar").addEventListener('click', limpar);
+
 
 ListarItens();
+
 
 
 

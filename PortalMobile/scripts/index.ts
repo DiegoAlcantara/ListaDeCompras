@@ -15,8 +15,8 @@ module PortalMobile {
             document.addEventListener('pause', onPause, false);
             document.addEventListener('resume', onResume, false);
 
-            window.addEventListener("batterystatus", onBatteryStatus, false);
-            window.addEventListener("batterylow", onBatteryLow, false);
+            //window.addEventListener("batterystatus", onBatteryStatus, false);
+            //window.addEventListener("batterylow", onBatteryLow, false);
 
 
 
