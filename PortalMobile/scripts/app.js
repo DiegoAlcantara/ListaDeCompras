@@ -89,7 +89,7 @@ function salvar()
 }
 
 document.getElementById("add").addEventListener('click', AdcionarIten);
-document.getElementById("limpar").addEventListener('click', limpar);
+document.getElementById("limpar").addEventListener('click', add);
 
 
 ListarItens();
@@ -105,7 +105,7 @@ function add() {
     $.ajax({
         type: "GET",
         dataType: "json",
-        url: "http://homologacao/apis/ponto/api/registrosDePonto/0100000505",
+        url: 'http://homologacao/apis/ponto/api/registrosDePonto/0100000505',
         success:success,
         error: err
     });
@@ -118,7 +118,7 @@ function success(data)
     alert(s);
 }
 
-function err()
+function err(data)
 {
             alert("erro");
 }
